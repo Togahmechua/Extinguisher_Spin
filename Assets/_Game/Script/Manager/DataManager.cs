@@ -13,13 +13,14 @@ public class DataManager : Singleton<DataManager>
     [SerializeField] private int foamPower;
     [SerializeField] private int firstShot;
 
+
     private void OnEnable()
     {
-        achivementData[AchivementType.Money] = PlayerPrefs.GetInt("Money", 500);
-        achivementData[AchivementType.Record] = PlayerPrefs.GetInt("Record", 120);
-        achivementData[AchivementType.FoamCount] = PlayerPrefs.GetInt("FoamCount", 10);
-        achivementData[AchivementType.Power] = PlayerPrefs.GetInt("Power", 10);
-        achivementData[AchivementType.FirstShotPower] = PlayerPrefs.GetInt("FirstShotPower", 10);
+        achivementData[AchivementType.Money] = PlayerPrefs.GetInt("Money", 0);
+        achivementData[AchivementType.Record] = PlayerPrefs.GetInt("Record", 0);
+        achivementData[AchivementType.FoamCount] = PlayerPrefs.GetInt("FoamCount", 1);
+        achivementData[AchivementType.Power] = PlayerPrefs.GetInt("Power", 100);
+        achivementData[AchivementType.FirstShotPower] = PlayerPrefs.GetInt("FirstShotPower", 100);
 
         money = Get<int>(AchivementType.Money);
         record = Get<int>(AchivementType.Record);

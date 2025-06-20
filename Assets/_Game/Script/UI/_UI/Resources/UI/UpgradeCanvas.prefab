@@ -367,18 +367,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3a9340f5aa333684fbab9ec467424762, type: 3}
-    m_FontSize: 51
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 51
+    m_MaxSize: 75
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 30
 --- !u!1 &2474285096982972857
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,18 +702,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3a9340f5aa333684fbab9ec467424762, type: 3}
-    m_FontSize: 51
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 51
+    m_MaxSize: 75
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 50
 --- !u!1 &5081967285070199144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,18 +1283,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3a9340f5aa333684fbab9ec467424762, type: 3}
-    m_FontSize: 51
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 51
+    m_MaxSize: 75
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 50
 --- !u!1 &8363582174853898684
 GameObject:
   m_ObjectHideFlags: 0

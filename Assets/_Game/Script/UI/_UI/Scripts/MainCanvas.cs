@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MainCanvas : UICanvas
 {
-    [SerializeField] private Button pauseBtn;
     [SerializeField] private Text foamCount;
     [SerializeField] private Text record;
 
@@ -16,18 +15,8 @@ public class MainCanvas : UICanvas
     {
         UIManager.Ins.mainCanvas = this;
         foamCount.text = "x" + DataManager.Ins.Get<int>(AchivementType.FoamCount).ToString();
-        meters = 100;
+        meters = 0;
         record.text = meters.ToString() + "m";
-    }
-
-    private void Start()
-    {
-        pauseBtn.onClick.AddListener(() =>
-        {
-            //AudioManager.Ins.PlaySFX(AudioManager.Ins.click);
-            UIManager.Ins.OpenUI<PauseCanvas>();
-            UIManager.Ins.CloseUI<MainCanvas>();
-        });
     }
 
     public int GetValue()
@@ -38,6 +27,13 @@ public class MainCanvas : UICanvas
     public int SetValue(int newMeters)
     {
         meters = newMeters;
+        record.text = meters.ToString() + "m"; // Update UI tại đây
         return meters;
     }
+
+    public void SetFoamCount(int count)
+    {
+        foamCount.text = "x" + count.ToString();
+    }
+
 }

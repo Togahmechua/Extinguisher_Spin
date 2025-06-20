@@ -56,8 +56,10 @@ public class PauseCanvas : UICanvas
             await UIManager.Ins.TransitionUI<ChangeUICanvas, PauseCanvas>(0.6f,
                 () =>
                 {
+                    LevelManager.Ins.DespawmLevel();
                     UIManager.Ins.CloseUI<PauseCanvas>();
                     UIManager.Ins.OpenUI<MainCanvas>();
+                    LevelManager.Ins.SpawnLevel();
                 });
         });
 

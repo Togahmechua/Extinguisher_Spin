@@ -5,7 +5,6 @@ using UnityEngine;
 public class CameraController : Singleton<CameraController>
 {
     [SerializeField] private Camera cam;
-    [SerializeField] private Transform extinguisher;
     [SerializeField] private float lerpSpeed = 2f;
 
     [Header("=== Camera ===")]
@@ -17,6 +16,7 @@ public class CameraController : Singleton<CameraController>
     [SerializeField] private float yThreshold2 = 20f;
 
     private CameraDetails currentTarget;
+    [HideInInspector] public Transform extinguisher;
 
     [Serializable]
     public class CameraDetails
@@ -25,14 +25,11 @@ public class CameraController : Singleton<CameraController>
         public float camSize;
     }
 
-    private void Start()
-    {
-        UpdateTargetByHeight();
-        ForceSnapToTarget();
-    }
-
     private void Update()
     {
+        if (extinguisher == null)
+            return;
+
         UpdateTargetByHeight();
         SmoothTransition();
         ForceToExtinguisher();

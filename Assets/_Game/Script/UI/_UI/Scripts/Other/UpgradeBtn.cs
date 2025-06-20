@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +39,7 @@ public class UpgradeBtn : MonoBehaviour
 
         thisBtn.onClick.AddListener(() =>
         {
+            AudioManager.Ins.PlaySFX(AudioManager.Ins.upgrade);
             Buy();
         });
     }
@@ -67,21 +68,30 @@ public class UpgradeBtn : MonoBehaviour
 
             case AchivementType.Power:
                 int power = DataManager.Ins.Get<int>(AchivementType.Power);
-                power += 5;
+                power += 10;
                 DataManager.Ins.Set(AchivementType.Power, power);
                 break;
 
             case AchivementType.FirstShotPower:
                 int fPower = DataManager.Ins.Get<int>(AchivementType.FirstShotPower);
-                fPower += 5;
+                fPower += 10;
                 DataManager.Ins.Set(AchivementType.FirstShotPower, fPower);
                 break;
         }
 
+        // Giá tăng gấp đôi sau mỗi lần mua
+        cost += 50;
+
+        // Cập nhật lại text giá mới
+        if (childTxt != null)
+        {
+            childTxt.text = cost.ToString();
+        }
+
+        RefreshButtonState();
         UIManager.Ins.upgradeCanvas.UpdateDataValue();
         OnPressBtn?.Invoke();
     }
-
 }
 
 
