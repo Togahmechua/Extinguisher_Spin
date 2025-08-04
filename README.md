@@ -6,7 +6,7 @@
 
 ## 🖼️ Screenshots
 
-<p align="center">
+<p align="left">
   <img width="600" src="https://github.com/user-attachments/assets/ff37b351-910a-42f7-a0c0-390cdd0d9183" alt="Main Screenshot" />
 </p>
 
